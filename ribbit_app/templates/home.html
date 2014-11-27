@@ -1,6 +1,7 @@
 {% extends "base.html" %}
  
 {% block login %}
+    <!-- renderdab login vormi lähtubalt forms.py-st -->
     <form action="/login" method="post">{% csrf_token %}
         {% for field in auth_form %}
         {{ field }}
@@ -11,6 +12,7 @@
  
 {% block content %}
 {% if auth_form.non_field_errors or user_form.non_field_errors %}
+
 <div class="flash error">
     {{ auth_form.non_field_errors }}
     {{ user_form.non_field_errors }}
@@ -20,6 +22,7 @@
 <div class="panel right">
     <h1>New to Ribbit?</h1>
     <p>
+    <!-- renderdab signup vormi lähtubalt forms.py-st -->
         <form action="/signup" method="post">{% csrf_token %}
             {% for field in user_form %}
             {{ field }}

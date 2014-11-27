@@ -11,5 +11,5 @@ urlpatterns = patterns('',
     url(r'^users/$', 'ribbit.ribbit_app.views.users'),
     url(r'^users/(?P<username>\w{0,30})/$', 'ribbit.ribbit_app.views.users'),
     url(r'^follow$', 'ribbit.ribbit_app.views.follow'),
-    url(r'^ribbits$', 'ribbit.ribbit_app.views.index'),         # Link oli aga tutorialsis urli selle peale ei olnud... Go figure.. 
+    url(r'^ribbits$', 'ribbit.ribbit_app.views.public'),         
 )

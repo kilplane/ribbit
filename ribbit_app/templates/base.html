@@ -10,6 +10,7 @@
             <img src="{{ STATIC_URL }}gfx/logo.png">
             <span>Twitter Clone</span>
             {% block login %}
+            <!-- tagurpidi loogika. kui pole sisse loginud, asendatakse login vormiga! -->
             <a href="/">Home</a>
             <a href="/users/">Public Profiles</a>
             <a href="/users/{{ username }}">My Profile</a>

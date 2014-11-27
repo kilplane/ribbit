@@ -21,8 +21,10 @@ class UserCreateForm(UserCreationForm):
         return form
  
     class Meta:
+        ## Rendering order
         fields = ['email', 'username', 'first_name', 'last_name', 'password1',
                   'password2']
+        ## Model definition
         model = User
 
 
@@ -50,6 +52,6 @@ class RibbitForm(forms.ModelForm):
  
     class Meta:
         model = Ribbit
-        exclude = ('user',)
+        exclude = ('user',) ## will not be renderd
 
         
